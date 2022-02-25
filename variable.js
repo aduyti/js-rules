@@ -53,3 +53,14 @@ money(); money(); money(); money(); money(); money(); money(); money(); money();
 age(); age(); age(); age(); age(); age(); age();    // = 7
 
 // count;  // not accessible, Local variable
+
+// callback function
+function operate(num1, num2, operation) {
+    return operation(num1, num2);
+}
+function add(num1, num2) {
+    return num1 + num2;
+}
+function diff(num1, num2) {
+    return num1 - num2;
+}
