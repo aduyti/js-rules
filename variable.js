@@ -9,7 +9,6 @@ var obj = { name: 'name' };
 // dynamic data type -- change data type with value assign
 obj = a;
 a = 'hello hello'
-console.log(obj);
 
 // True/False
 '3' === 3;  // false
@@ -35,3 +34,22 @@ a == false; // true
 // implicit conversion
 ar == arr2; // false
 arr == arr2; // true
+
+varUp = 5;  // will work Hoisting
+var varUp = 'sfd';
+
+data = 1;   // will work GLOBAL Leaking
+// letUp = 4;  // ReferenceError: Cannot access 'letUp' before initialization  // for 'let' and 'const'
+let letUp = 1;
+letUp = 2;
+// closure or encapsulation
+function increase() {
+    let count = 0;
+    return () => ++count;
+}
+var money = increase(); // money = () => ++count    // with a count ref as private variable
+var age = increase();   // age = () => ++count
+money(); money(); money(); money(); money(); money(); money(); money(); money(); money(); money();  // = 11
+age(); age(); age(); age(); age(); age(); age();    // = 7
+
+// count;  // not accessible, Local variable
