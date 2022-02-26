@@ -64,3 +64,7 @@ function add(num1, num2) {
 function diff(num1, num2) {
     return num1 - num2;
 }
+
+var arrD = [1, 2, 3, 4];
+delete arrD[2]; // returns true     // not appropriate
+arrD;    // [1, 2, empty, 4]
